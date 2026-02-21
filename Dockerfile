@@ -7,7 +7,8 @@ USER frappe
 WORKDIR /home/frappe/frappe-bench
 
 # Get your custom app
-RUN bench get-app https://github.com/indsys-dev/site-job-management.git
+RUN bench remove-app frappe
+RUN bench remove-app erpnext
 
 # Build assets
 RUN bench build
